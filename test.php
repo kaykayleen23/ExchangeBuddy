@@ -16,11 +16,7 @@
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
 </head>
 
-<<<<<<< HEAD
 <body class=" bg-gray-50 min-h-screen ">
-=======
-<body class="font-[Syne] bg-gray-50 min-h-screen ">
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
     <!--hero section-->
     <div>
         <div>
