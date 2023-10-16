@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/msdropdown/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,13 +115,16 @@
                                         <div class="mt-2">
                                             <div
                                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                                                <select name="to" id="to" autocomplete="to" class="block flex-1 border-0 rounded-md bg-transparent py-1.5 pl-1 
+                                                <select onchange="showValue(this.value)" name="to" id="to"
+                                                    autocomplete="to" class="block flex-1 border-0 rounded-md bg-transparent py-1.5 pl-1 
                         text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
                                                     <!-- Add currency options dynamically or manually -->
                                                     <option value="">Select</option>
-                                                    <option value="USD">USD</option>
-                                                    <option value="EUR">EUR</option>
-                                                    <option value="JPY">JPY</option>
+                                                    <option value="USD" data-image="./images/united-states.png">USD
+                                                    </option>
+                                                    <option value="EUR" data-image="./images/european-union.png">EUR
+                                                    </option>
+                                                    <option value="JPY" data-image="./images/japan.png">JPY</option>
                                                     <option value="BGN">BGN</option>
                                                     <option value="CZK">CZK</option>
                                                     <option value="DKK">DKK</option>
@@ -152,7 +158,6 @@
                                             </div>
                                         </div>
                                     </div>
-
 
                                 </div>
                                 <!-- <div class="flex inline-block">
@@ -248,14 +253,8 @@
             }
         }
     </script>
-    <script>
-        function updateFlag(select, flagId) {
-            const flagDiv = document.getElementById(flagId);
-            const selectedOption = select.options[select.selectedIndex];
-            const flagUrl = selectedOption.getAttribute('data-flag');
 
-            flagDiv.style.backgroundImage = `url(${flagUrl})`;
-        }
+    <script>
 
         function convert() {
             const host = 'api.frankfurter.app';
