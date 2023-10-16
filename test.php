@@ -53,27 +53,19 @@
                                             <div
                                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                                 <input type="number" name="amount" id="amount" autocomplete="amount"
-<<<<<<< HEAD
                                                     class=" font-[ALbert Sans] block flex-1 rounded-md bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6"
-=======
-                                                    class="block flex-1 rounded-md bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6"
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
                                                     placeholder="">
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
 
                                     <!--FROM-->
-=======
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
                                     <div>
                                         <label for="from"
                                             class="block text-md font-medium leading-6 text-gray-900">From</label>
                                         <div class="mt-2">
                                             <div
                                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-<<<<<<< HEAD
                                                 <select name="from" id="from" autocomplete="from" class="block flex-1 border-0 rounded-md bg-transparent py-1.5 pl-1 
                         text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
                                                     <option value="">Select</option>
@@ -114,21 +106,12 @@
                                     </div>
 
                                     <!--TO-->
-=======
-                                                <input type="text" name="from" id="from" autocomplete="from"
-                                                    class="block flex-1 border-0 rounded-md bg-transparent py-1.5 pl-1 
-                                                        text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="0">
-                                            </div>
-                                        </div>
-                                    </div>
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
                                     <div>
                                         <label for="to"
                                             class="block text-md font-medium leading-6 text-gray-900">To</label>
                                         <div class="mt-2">
                                             <div
                                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-<<<<<<< HEAD
                                                 <select name="to" id="to" autocomplete="to" class="block flex-1 border-0 rounded-md bg-transparent py-1.5 pl-1 
                         text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
                                                     <!-- Add currency options dynamically or manually -->
@@ -171,14 +154,6 @@
                                     </div>
 
 
-=======
-                                                <input type="text" name="to" id="to" autocomplete="to"
-                                                    class="block flex-1 border-0 rounded-md bg-transparent py-1.5 pl-1 
-                                                        text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="0">
-                                            </div>
-                                        </div>
-                                    </div>
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
                                 </div>
                                 <!-- <div class="flex inline-block">
                                 <p class="text-gray-500 text-sm ml-5">Amount</p>
@@ -188,7 +163,6 @@
                                 </div> -->
                                 <div>
                                     <h3 class="text-gray-700 text-lg mx-5">Total</h3>
-<<<<<<< HEAD
                                     <p class="text-gray-500 text-sm mx-5 mt-1" id="conversionResult"></p>
                                 </div>
                                 <div class="flex items-center justify-end">
@@ -196,29 +170,14 @@
                                                 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 
                                                 text-center mx-5 dark:border-cyan-400 dark:text-cyan-400 dark:hover:text-white 
                                                 dark:hover:bg-cyan-500 dark:focus:ring-cyan-900" onclick="convert()">
-=======
-                                    <p class="text-gray-500 text-sm mx-2" id="conversionResult"></p>
-                                </div>
-                                <div class="flex items-center justify-end">
-                                    <button type="button" 
-                                            class="text-cyan-700 hover:text-white border border-cyan-700 hover:bg-cyan-800 focus:ring-4 
-                                                focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 
-                                                text-center mx-5 dark:border-cyan-400 dark:text-cyan-400 dark:hover:text-white 
-                                                dark:hover:bg-cyan-500 dark:focus:ring-cyan-900" 
-                                            onclick="convert()">
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
                                         Convert</button>
                                 </div>
                             </form>
 
                             <!-- ALERT FORM -->
                             <form action="" class="hidden" id="form2">
-<<<<<<< HEAD
                                 <h2 class="text-md py-7 text-center px-5">Want to be notified when the exchange rate
                                     changes
-=======
-                                <h2 class="text-lg py-7 text-center">Want to be notified when the exchange rate changes
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
                                     to your
                                     desired amount? Subscribe here!</h2>
                                 <div class="grid grid-cols-2 gap-4 px-5 pb-10">
@@ -290,7 +249,6 @@
         }
     </script>
     <script>
-<<<<<<< HEAD
         function updateFlag(select, flagId) {
             const flagDiv = document.getElementById(flagId);
             const selectedOption = select.options[select.selectedIndex];
@@ -335,39 +293,6 @@
                 });
         }
     </script>
-=======
-        function convert() {
-    const host = 'api.frankfurter.app';
-
-    // Get values from input fields
-    const fromCurrency = document.getElementById('from').value;
-    const toCurrency = document.getElementById('to').value;
-    const amount = document.getElementById('amount').value;
-
-    if (!fromCurrency || !toCurrency || !amount) {
-        alert("Please enter valid 'Amount,' 'From,' and 'To' values.");
-        return;
-    }
-
-    const apiUrl = `https://${host}/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`;
-
-    fetch(apiUrl)
-        .then(resp => resp.json())
-        .then((data) => {
-            console.log(data); // Log the API response
-            const resultText = `${amount} ${fromCurrency} = ${data.rates[toCurrency]} ${toCurrency}`;
-            const resultAmount = `${amount} ${fromCurrency} `;
-            // Update the content of the <p> element with the result
-            document.getElementById('conversionResult').textContent = resultText;
-            document.getElementById('conversionAmount').textContent = resultAmount;
-        })
-        .catch(error => {
-            console.error("API request error:", error); // Log any errors
-        });
-}
-    </script>
-
->>>>>>> 23dfdb92eb7ab2625661eb6a5823c422e3c52bbb
 </body>
 
 </html>
